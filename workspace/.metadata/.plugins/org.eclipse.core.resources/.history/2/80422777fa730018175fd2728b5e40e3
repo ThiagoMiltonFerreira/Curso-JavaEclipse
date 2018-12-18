@@ -1,0 +1,23 @@
+package CotroleDeGastos;
+
+import javax.swing.*;
+
+public class CalculoDePassagem {
+	public static void main(String[] args) {
+		
+	
+		String SalarioTotal = JOptionPane.showInputDialog("Salario Base.");
+		double Desconto = (Double.parseDouble(SalarioTotal)*6)/100;
+		String Saida = JOptionPane.showInputDialog("ddd","Seu Valor de desconto com base no calculo de 6% é: ",String.valueOf(Desconto));
+	
+	//Object[] opcoes = {"Um","Dois","Tres","Quatro"};
+	//Object res = JOptionPane.showInputDialog(null, "Escolha um item" , "Selecao de itens" ,
+	//				JOptionPane.PLAIN_MESSAGE , null ,opcoes,"");
+	
+	
+	
+	
+	
+	
+	}
+}

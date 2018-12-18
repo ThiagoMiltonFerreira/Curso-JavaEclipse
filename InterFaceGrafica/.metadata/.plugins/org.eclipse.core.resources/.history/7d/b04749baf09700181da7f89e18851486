@@ -1,0 +1,98 @@
+package view;
+
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+import javax.swing.JPasswordField;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+
+public class ViewLogin {
+
+	private JFrame frame;
+	private JTextField txtSenha;
+	private JPasswordField passwordField;
+	private JPasswordField txtLogin;
+	private JButton btnEntrar;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					ViewLogin window = new ViewLogin();
+					window.frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the application.
+	 */
+	public ViewLogin() {
+		initialize();
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		frame = new JFrame();
+		frame.setBounds(100, 100, 456, 294);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.getContentPane().setLayout(null);
+		
+		JLabel lblLogin = new JLabel("Login");
+		lblLogin.setBounds(39, 33, 46, 14);
+		frame.getContentPane().add(lblLogin);
+		
+		txtSenha = new JTextField();
+		txtSenha.setBounds(39, 122, 255, 29);
+		frame.getContentPane().add(txtSenha);
+		txtSenha.setColumns(10);
+		
+		JLabel lblSenha = new JLabel("Senha");
+		lblSenha.setBounds(39, 105, 46, 14);
+		frame.getContentPane().add(lblSenha);
+		
+		passwordField = new JPasswordField();
+		passwordField.setBounds(110, 184, -79, 9);
+		frame.getContentPane().add(passwordField);
+		
+		txtLogin = new JPasswordField();
+		txtLogin.setBounds(39, 52, 255, 29);
+		frame.getContentPane().add(txtLogin);
+		
+		btnEntrar = new JButton("Entrar");
+		btnEntrar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {		
+				//ação do btn
+				
+				if(checkLogin(txtLogin.getText(),) {
+					
+				}
+				
+			}
+			
+			
+		});
+		btnEntrar.setBounds(110, 184, 89, 34);
+		frame.getContentPane().add(btnEntrar);
+	}
+	
+	
+	//classe criada nao vem como padrao
+	public boolean checkLogin(String login,String senha) {
+		return login.equals("usuario") && senha.equals("123");    // se for igual retorna true se nao false
+	}
+	
+	
+}

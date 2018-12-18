@@ -1,0 +1,12 @@
+package polimorfismo;
+
+public class Cachorro extends Manifero {
+
+	/**public void locomover() {       Sobreposicao
+	
+		
+		System.out.println("Andando");
+	}
+	**/
+
+}

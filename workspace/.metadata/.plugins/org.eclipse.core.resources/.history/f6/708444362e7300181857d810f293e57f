@@ -1,0 +1,17 @@
+package fundamentos;
+
+import javax.swing.*;
+
+public class ConversaoStringNumero {
+
+	public static void main(String[] args) {
+		//JOptionPane.showInputDialog("Qual é a nota1?");
+		//JOptionPane.showMessageDialog("qual é a nota? ");
+		
+		String resp2 = JOptionPane.showInputDialog("QUAL E A NOTA");
+
+	
+
+	}
+
+}

@@ -1,0 +1,5 @@
+package ControleDeEstoque;
+
+public class BloqueiaEntradaNoVetorProduto {
+
+}

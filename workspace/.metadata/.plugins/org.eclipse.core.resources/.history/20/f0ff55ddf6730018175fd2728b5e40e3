@@ -1,0 +1,13 @@
+package CotroleDeGastos;
+
+import javax.swing.*;
+
+public class CalculoDePassagem {
+	String SalarioTotal = JOptionPane.showInputDialog("Salario Base.");
+	String Desconto = Double.parseDouble();
+	
+	
+	
+	
+
+}

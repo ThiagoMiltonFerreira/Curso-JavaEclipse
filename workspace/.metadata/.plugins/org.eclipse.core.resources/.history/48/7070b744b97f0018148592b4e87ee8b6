@@ -1,0 +1,18 @@
+package ControleDeEstoque;
+
+import java.util.Random;
+
+public class Principal {
+
+	public static void main(String[] args) {
+		Random gerador = new Random();
+		int idProduto=gerador.nextInt();
+		Produtos CadastroDeProdutos=new Produtos(idProduto,"chip");
+
+		
+		
+		
+
+	}
+
+}

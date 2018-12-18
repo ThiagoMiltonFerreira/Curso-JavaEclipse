@@ -1,0 +1,28 @@
+package ControleDeEstoque;
+
+import java.util.Random;
+
+public class Produtos {
+	
+	Produtos(int id,String codigoDeBarras){
+		String CodBarrasProdutosEnome[][] = {{"7890218233597","SDS 3k","3"},{"7891","Hark power","2"}};
+
+		for(int contLinha=0;contLinha<2;contLinha++)
+			{
+				
+				for(int contColuna=0;contColuna<2;contColuna++)
+				{
+
+					if(Integer.parseInt(CodBarrasProdutosEnome[contLinha][0].substring(0, 4))==Integer.parseInt(codigoDeBarras.substring(0, 4)))
+					{
+					System.out.print(CodBarrasProdutosEnome[contLinha][contColuna]+" ");
+					}
+				
+			}
+		}
+	}
+}
+
+	
+	
+

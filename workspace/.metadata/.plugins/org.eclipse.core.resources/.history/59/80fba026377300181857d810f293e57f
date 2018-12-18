@@ -1,0 +1,22 @@
+package fundamentos;
+
+
+
+public class ConversaoNumeroString {
+
+	public static void main(String[] args) {
+		
+		//Integer num1 = Integer.valueOf(10000);
+		//System.out.println("LInha 10 : "+num1.toString().length());
+
+		int num2 = 1000000;
+		System.out.println("LInha 13 : "+Integer.toString(num2).length());
+		
+	
+		
+		
+		
+		
+	}
+
+}

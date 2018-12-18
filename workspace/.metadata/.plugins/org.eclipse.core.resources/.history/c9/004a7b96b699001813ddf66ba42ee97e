@@ -1,0 +1,77 @@
+package ControleDeEstoque;
+
+import java.sql.ResultSet;
+
+import javax.swing.JOptionPane;
+
+public class BuscaBanco {
+Conexao con = new Conexao();
+	
+
+    private String id;
+    private String usuario;
+    private String senha;
+    public void RecebeSenha(String RecebeSenha){
+    	
+    	/**
+    	String sql = "SELECT * FROM tbl_usuario WHERE senha = '"+RecebeSenha+"'";
+    	ResultSet rs = con.executaBusca(sql);
+    	try {
+			while (rs.next()) {
+			//id(rs.getString("id"));
+				usuario =  rs.getString("usuario");	
+			//	JOptionPane.showMessageDialog(null, usuario, usuario, JOptionPane.ERROR_MESSAGE);
+				senha = rs.getString("senha");
+			//	JOptionPane.showMessageDialog(null, senha, senha, JOptionPane.ERROR_MESSAGE);
+			//System.out.println(idSistema+" - "+id+" - "+nome+" - "+qtd+" - "+valor);
+							
+			}
+		
+
+		
+		} catch (Exception e) {
+		
+			e.printStackTrace();
+		}
+		**/
+    	
+    	
+    	String sql = "SELECT * FROM produtos ";
+    	ResultSet rs = con.executaBusca(sql);
+    	
+    	try {
+			while (rs.next()) {
+				id = rs.getString("id");
+				usuario = rs.getString("usuario");
+				senha = rs.getString("senha");
+				//System.out.println(idSistema+" - "+id+" - "+nome+" - "+qtd+" - "+valor+" - "+promocao);
+				
+			}
+		} catch (Exception e) {
+		
+			e.printStackTrace();
+		}
+    	
+    	
+    	
+}
+	public String getId() {
+		return id;
+	}
+	public void setId(String id) {
+		this.id = id;
+	}
+	
+	public String getUsuario() {
+		return usuario;
+	}
+	public void setUsuario(String usuario) {
+		this.usuario = usuario;
+	}
+	public String getSenha() {
+		return senha;
+	}
+	public void setSenha(String senha) {
+		this.senha = senha;
+	}
+}

@@ -1,0 +1,44 @@
+package ControleDeEstoque;
+
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.Random;
+import java.util.Scanner;
+
+public class Principal {
+
+	public static void main(String[] args) throws SQLException {
+		
+	
+		Scanner leitura=new Scanner(System.in);
+	
+		
+		Crud crud = new Crud();
+		System.out.println("Digite 1 para INSERIR ou 2 para VER TODOS PRODUTOS.");
+		int inserirOuVerificar = leitura.nextInt();
+		
+		if(inserirOuVerificar==1) {	
+			System.out.println("Nome do produto:");
+			String nomeDoProduto = leitura.next();
+		    System.out.println("Codigo de barras:");
+		    String codDeBarras = leitura.next();
+		    System.out.println("Quantidade:");
+		    String qtdProdutosEstoque = leitura.next();
+			crud.insere(nomeDoProduto,codDeBarras,qtdProdutosEstoque);		
+		}
+		else if(inserirOuVerificar==2)
+		{		
+		crud.select();
+		}
+		else
+		{
+			System.out.println("Verifique a opçao desejada!!");
+		}
+		
+		}
+	}
+
+
+

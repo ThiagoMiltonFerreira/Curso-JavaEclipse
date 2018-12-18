@@ -1,0 +1,18 @@
+package ControleDeEstoque;
+
+import java.util.Random;
+
+public class Principal {
+
+	public static void main(String[] args) {
+	
+
+		Random gerador = new Random();
+		System.out.println(gerador.nextInt());
+		
+		
+		
+
+	}
+
+}

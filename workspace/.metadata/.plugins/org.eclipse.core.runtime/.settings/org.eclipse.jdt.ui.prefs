@@ -1,0 +1,24 @@
+content_assist_disabled_computers=org.eclipse.jdt.ui.textProposalCategory\u0000org.eclipse.recommenders.calls.rcp.proposalCategory.templates\u0000org.eclipse.mylyn.java.ui.javaAllProposalCategory\u0000org.eclipse.jdt.ui.javaAllProposalCategory\u0000org.eclipse.jdt.ui.javaTypeProposalCategory\u0000org.eclipse.jdt.ui.javaNoTypeProposalCategory\u0000org.eclipse.recommenders.chain.rcp.proposalCategory.chain\u0000
+content_assist_lru_history=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><history maxLHS\="100" maxRHS\="10"><lhs name\="java.lang.Number"><rhs name\="java.lang.Integer"/></lhs><lhs name\="ExercitandoClasse.ClasseFuncionario"><rhs name\="ExercitandoClasse.ClasseFuncionario"/></lhs><lhs name\="ExercicioMetodos.Funcionario"><rhs name\="ExercicioMetodos.Funcionario"/></lhs><lhs name\="DiskGarotas.CadastroGarota"><rhs name\="DiskGarotas.CadastroGarota"/></lhs><lhs name\="java.lang.CharSequence"><rhs name\="java.lang.String"/><rhs name\="java.lang.StringBuilder"/></lhs><lhs name\="classe.Login"><rhs name\="classe.Login"/></lhs><lhs name\="classe.Principal"><rhs name\="classe.Principal"/></lhs><lhs name\="ControleDeEstoque.Conexao"><rhs name\="ControleDeEstoque.Conexao"/></lhs><lhs name\="ControleDeEstoque.Crud"><rhs name\="ControleDeEstoque.Crud"/></lhs><lhs name\="classe.variavelStatic"><rhs name\="classe.variavelStatic"/></lhs><lhs name\="classe.ValorVsReferencia"><rhs name\="classe.ValorVsReferencia"/></lhs><lhs name\="classe.Produto"><rhs name\="classe.Produto"/></lhs><lhs name\="classe.ValorPadrao"><rhs name\="classe.ValorPadrao"/></lhs><lhs name\="oo.Comida"><rhs name\="oo.Sorvete"/></lhs><lhs name\="oo.Sorvete"><rhs name\="oo.Sorvete"/></lhs><lhs name\="api.StringBuilder"><rhs name\="api.StringBuilder"/></lhs><lhs name\="java.lang.AbstractStringBuilder"><rhs name\="java.lang.StringBuilder"/></lhs><lhs name\="java.lang.Appendable"><rhs name\="java.lang.StringBuilder"/></lhs><lhs name\="ControleDeEstoque.VerificaSenha"><rhs name\="ControleDeEstoque.VerificaSenha"/></lhs><lhs name\="java.awt.image.ImageObserver"><rhs name\="java.awt.Label"/></lhs><lhs name\="java.awt.MenuContainer"><rhs name\="java.awt.Label"/></lhs><lhs name\="java.awt.Component"><rhs name\="java.awt.Label"/></lhs><lhs name\="ControleDeEstoque.BuscaSenhaNoBanco"><rhs name\="ControleDeEstoque.BuscaSenhaNoBanco"/></lhs><lhs name\="ControleDeEstoque.PaginaInicialControleEstoque"><rhs name\="ControleDeEstoque.PaginaInicialControleEstoque"/></lhs><lhs name\="ControleDeEstoque.senhaNoBanco"><rhs name\="ControleDeEstoque.senhaNoBanco"/></lhs><lhs name\="javax.swing.table.AbstractTableModel"><rhs name\="ControleDeEstoque.TableEx$TableData"/></lhs><lhs name\="javax.swing.table.TableModel"><rhs name\="ControleDeEstoque.TableEx$TableData"/></lhs><lhs name\="ControleDeEstoque.TableEx$TableData"><rhs name\="ControleDeEstoque.TableEx$TableData"/></lhs><lhs name\="ControleDeEstoque.BuscaBanco"><rhs name\="ControleDeEstoque.BuscaBanco"/></lhs></history>
+content_assist_number_of_computers=24
+content_assist_proposals_background=255,255,255
+content_assist_proposals_foreground=0,0,0
+eclipse.preferences.version=1
+fontPropagated=true
+markOccurrences=false
+org.eclipse.jdt.internal.ui.navigator.layout=2
+org.eclipse.jdt.internal.ui.navigator.librariesnode=true
+org.eclipse.jdt.ui.editor.tab.width=
+org.eclipse.jdt.ui.formatterprofiles.version=13
+org.eclipse.jdt.ui.javadoclocations.migrated=true
+org.eclipse.jdt.ui.text.code_templates_migrated=true
+org.eclipse.jdt.ui.text.custom_code_templates=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><templates/>
+org.eclipse.jdt.ui.text.custom_templates=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><templates/>
+org.eclipse.jdt.ui.text.templates_migrated=true
+org.eclipse.jface.textfont=1|Courier New|10.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Courier New;
+proposalOrderMigrated=true
+sourceHoverBackgroundColor=255,255,225
+spelling_locale_initialized=true
+tabWidthPropagated=true
+useAnnotationsPrefPage=true
+useQuickDiffPrefPage=true

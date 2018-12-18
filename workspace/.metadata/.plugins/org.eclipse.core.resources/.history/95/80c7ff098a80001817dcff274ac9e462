@@ -1,0 +1,5 @@
+package ControleDeEstoque;
+
+public class vetor {
+	String CodBarrasProdutosEnome[][] = {{"7890218233597","SDS 3k",produto,"350"},{"7891","Hark power","2","340"},{"7892","Cabo Y blidado Stetsom","3","30"}};
+}

@@ -1,0 +1,136 @@
+package ControleDeEstoque;
+
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JTextField;
+import javax.swing.JPasswordField;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import java.awt.Label;
+import java.awt.Color;
+import java.awt.Canvas;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+
+public class PaginaInicialControleEstoque {
+
+	private String usuario;
+	private String senha;
+	public JFrame frame;
+	public JTextField txtUsuario;
+	public String getTxtUsuario() {
+		return usuario;
+	}
+	public void SetTxtUsuario() {
+		this.usuario = txtUsuario.getText();
+	}
+	private JPasswordField txtSenha;
+	public String getTxtSenha() {
+		return senha;
+	}
+	public void SetTxtSenha() {
+		this.senha = new String(txtSenha.getPassword());
+	}
+	
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					PaginaInicialControleEstoque window = new PaginaInicialControleEstoque();
+					window.frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+					
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the application.
+	 */
+	public PaginaInicialControleEstoque() {
+		initialize();
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		
+
+		
+		frame = new JFrame();
+		frame.setBounds(100, 100, 359, 300);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.getContentPane().setLayout(null);
+	
+		
+		txtUsuario = new JTextField();
+		txtUsuario.setBounds(74, 52, 94, 20);
+		frame.getContentPane().add(txtUsuario);
+		txtUsuario.setColumns(10);
+		
+		txtSenha = new JPasswordField();
+		txtSenha.setBounds(74, 102, 94, 20);
+		frame.getContentPane().add(txtSenha);
+		
+		JLabel lblUsuario = new JLabel("Usuario");
+		lblUsuario.setBounds(74, 35, 46, 14);
+		frame.getContentPane().add(lblUsuario);
+		
+		JLabel lblSenha = new JLabel("Senha");
+		lblSenha.setBounds(74, 83, 46, 14);
+		frame.getContentPane().add(lblSenha);
+		
+		JButton btnEntrar = new JButton("Entrar");
+		btnEntrar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				BuscaBanco buscaSenhaNoBanco = new BuscaBanco();
+				buscaSenhaNoBanco.RecebeSenha(getTxtSenha());
+				//senha verificaSenha = new VerificaSenha();
+				//senhaNoBanco verificaSenha = new senhaNoBanco();				
+				String senhaDoBanco =buscaSenhaNoBanco.getSenha();
+				
+				String usuarioDoBanco =buscaSenhaNoBanco.getUsuario();
+			
+				
+				/**if (senhaDoBanco == senha) {
+					//JOptionPane.showMessageDialog(null, "logado!!1", "FUNCIONO", JOptionPane.ERROR_MESSAGE);
+					PaginaInicialControleEstoque.dispose();
+					new inicio();
+				 
+				
+				
+					
+					}
+				**/	
+				
+			}
+		});
+		btnEntrar.setBounds(74, 133, 89, 23);
+		frame.getContentPane().add(btnEntrar);
+		
+		JLabel label = new JLabel("");
+		label.setIcon(new ImageIcon("C:\\Users\\ART\\Desktop\\ImgLogin.jpg"));
+		label.setBounds(0, 0, 343, 261);
+		frame.getContentPane().add(label);
+		@SuppressWarnings("unused")
+		Conexao con = new Conexao();
+		
+		
+		
+		
+		
+	}
+	protected static void dispose() {
+		// TODO Auto-generated method stub
+		
+	}
+}

@@ -1,0 +1,57 @@
+package ControleDeEstoque;
+
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.Random;
+import java.util.Scanner;
+
+public class Crud {
+	//String produtos = "Cabo Y";
+	Conexao con = new Conexao();
+	//Principal mandas = new Principal;
+	
+    public void insere(String nomeDoProduto,String id,String qtdEstoque){
+	
+	String sql = "INSERT INTO produtos (nome, id, qtd) VALUES ('"+nomeDoProduto+"',"+id+","+qtdEstoque+")";
+	int res = con.executaSQL(sql);
+	
+	if(res > 0) {
+		System.out.println("Cadastrado com sucesso!!");
+	}
+	else
+	{
+		System.out.println("Erro ao cadastrar");
+	}
+	}
+   
+    public void select(){
+    	String sql = "SELECT * FROM produtos ";
+    	ResultSet rs = con.executaBusca(sql);
+    	
+    	try {
+			while (rs.next()) {
+				String id = rs.getString("id");
+				String idSistema = rs.getString("idSistema");
+				String nome = rs.getString("nome");
+				int qtd = rs.getInt("qtd");
+				System.out.println(idSistema+" - "+id+" - "+nome+" - "+qtd);
+		
+			}
+		} catch (Exception e) {
+		
+			e.printStackTrace();
+		}
+    	
+    public void deleta(String recebeIdParaDeletar) {
+    	String sql = "DELETE FROM produtos WHERE id='recebeIdParaDeletar'";
+    			
+    		int res = con.executaSQL(sql);
+    }
+      }
+    }
+    
+
+
+

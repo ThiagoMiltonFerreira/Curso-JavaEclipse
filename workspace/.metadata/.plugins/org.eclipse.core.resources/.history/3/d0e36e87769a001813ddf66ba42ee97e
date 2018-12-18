@@ -1,0 +1,81 @@
+package ControleDeEstoque;
+
+import java.sql.ResultSet;
+
+import javax.swing.JOptionPane;
+
+public class BuscaBanco {
+Conexao con = new Conexao();
+PaginaInicialControleEstoque s1 = new PaginaInicialControleEstoque();
+	
+
+    private String id;
+    private String usuario;
+    private String senha;
+    //String usuarioBanco;
+    //String senhaBanco;
+    public String getId() {
+		return id;
+	}
+	public void setId(String id) {
+		this.id = id;
+	}
+	
+	public String getUsuario() {
+		return usuario;
+	}
+	public void setUsuario(String usuario) {
+		this.usuario = usuario;
+	}
+	public String getSenha() {
+		return senha;
+	}
+	public void setSenha(String senha) {
+		this.senha = senha;
+	}
+    public void RecebeSenha(String RecebeSenha){
+    
+    	/**String sql = "SELECT * FROM tbl_usuario where senha= '"+RecebeSenha+"'";
+    	ResultSet rs = con.executaBusca(sql);
+		JOptionPane.showMessageDialog(null,"buscando", "FUNCIONO111", JOptionPane.ERROR_MESSAGE);
+
+    	try {
+			while (rs.next()) {
+							
+				
+				
+				
+				/**s1.SetTxtUsuario();
+				s1.SetTxtSenha();
+				if (usuario==s1.getTxtUsuario() && senha==s1.getTxtSenha()) {
+					JOptionPane.showMessageDialog(null, usuario, senha, JOptionPane.ERROR_MESSAGE);
+				}
+				System.out.println(idSistema+" - "+id+" - "+nome+" - "+qtd+" - "+valor+" - "+promocao);
+				 **/
+    	String sql = "SELECT * FROM produtos ";
+    	ResultSet rs = con.executaBusca(sql);
+    	
+    	try {
+			while (rs.next()) {
+				String id = rs.getString("id");
+				String idSistema = rs.getString("idSistema");
+				String nome = rs.getString("nome");
+				int qtd = rs.getInt("qtd");
+				double valor = rs.getDouble("valor");
+
+				if(id=="1") {
+				System.out.println(idSistema+" - "+id+" - "+nome+" - "+qtd+" - "+valor+" - ");
+				
+				}
+				}
+			}
+		 catch (Exception e) {
+		
+			e.printStackTrace();
+		}
+    	
+    	
+    	
+}
+	
+}

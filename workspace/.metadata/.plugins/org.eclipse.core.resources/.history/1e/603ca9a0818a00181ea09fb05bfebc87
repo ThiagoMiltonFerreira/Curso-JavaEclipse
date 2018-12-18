@@ -1,0 +1,118 @@
+package ControleDeEstoque;
+
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.Random;
+import java.util.Scanner;
+
+public class Crud {
+	//String produtos = "Cabo Y";
+	Conexao con = new Conexao();
+
+	//Principal mandas = new Principal;
+	static boolean promocao;
+    public void insere(String nomeDoProduto,String id,String qtdEstoque){
+	String sql = "INSERT INTO produtos (nome, id, qtd) VALUES ('"+nomeDoProduto+"',"+id+","+qtdEstoque+")";
+	int res = con.executaSQL(sql);
+	
+	if(res > 0) {
+		System.out.println("Cadastrado com sucesso!!");
+	}
+	else
+	{
+		System.out.println("Erro ao cadastrar");
+	}
+	}
+   
+    public boolean select(){
+    	String sql = "SELECT * FROM produtos ";
+    	ResultSet rs = con.executaBusca(sql);
+    	
+    	try {
+			while (rs.next()) {
+				String id = rs.getString("id");
+				String idSistema = rs.getString("idSistema");
+				String nome = rs.getString("nome");
+				int qtd = rs.getInt("qtd");
+				double valor = rs.getInt("valor");
+				promocao = rs.getBoolean("Promocao");
+				System.out.println(idSistema+" - "+id+" - "+nome+" - "+qtd+" - "+valor+" - "+promocao);
+				
+			}
+		} catch (Exception e) {
+		
+			e.printStackTrace();
+		}
+    	return promocao;
+    }
+    	
+    public void selectComWhere(String RecebeWhere){
+    	String sql = "SELECT * FROM produtos WHERE id = '"+RecebeWhere+"'";
+    	ResultSet rs = con.executaBusca(sql);
+    	try {
+			while (rs.next()) {
+				String id = rs.getString("id");
+				String idSistema = rs.getString("idSistema");
+				String nome = rs.getString("nome");
+				int qtd = rs.getInt("qtd");
+				double valor = rs.getInt("valor");
+				System.out.println(idSistema+" - "+id+" - "+nome+" - "+qtd+" - "+valor);
+							
+			}
+		
+		} catch (Exception e) {
+		
+			e.printStackTrace();
+		}
+    
+    }
+    
+    public void excluir(String recebeIdParaDeletar) {
+	 String sql = "DELETE FROM produtos WHERE id='"+recebeIdParaDeletar+"'";
+    			
+    		int res = con.executaSQL(sql);
+    		if(res > 0) {
+    			System.out.println("Deletado com Sucesso!!");
+    		}
+    		else
+    		{
+    			System.out.println("Erro ao deletar");
+    		}
+    		
+    }
+    public void alterar(String id,String qtd,String nome ){
+    	String sqlUpdate = "UPDATE produtos SET nome = '"+nome+"', qtd = '"+qtd+"' , WHERE id='"+id+"'";   	
+    	int res = con.executaSQL(sqlUpdate);
+		if(res > 0) {
+			System.out.println("Alterado com Sucesso!!");
+		}
+		else
+		{
+			System.out.println("Erro ao alterar");
+		}
+    
+    }
+    public void alterarPromocaoGeral(Boolean estatusPromocao  ){
+    	String sqlUpdate = "UPDATE produtos SET promocao = '"+estatusPromocao+"'";  
+    	int res = con.executaSQL(sqlUpdate);
+		if(res > 0) {
+			System.out.println("Alterado com Sucesso!!");
+		}
+		else
+		{
+			System.out.println("Erro ao alterar");
+		}
+		
+    
+    }
+    
+    
+      }
+
+
+    
+
+
+

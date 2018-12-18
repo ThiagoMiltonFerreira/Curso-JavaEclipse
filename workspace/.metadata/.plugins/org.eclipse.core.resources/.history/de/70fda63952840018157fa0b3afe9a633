@@ -1,0 +1,74 @@
+package ControleDeEstoque;
+
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.Random;
+import java.util.Scanner;
+
+public class Principal {
+
+	public static void main(String[] args) throws SQLException {
+		Scanner leitura=new Scanner(System.in);
+		//Produtos CadastroDeProdutos=new Produtos();
+		/*try {
+			Connection con=Conexao.criarConexao();
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	
+       
+		Conexao con = new Conexao();
+		String sql = "INSERT INTO produtos (nome, id)"+"VALUES ('HarkPower','7891')";
+		int res = con.executaSQL(sql);
+		if(res > 0) {
+			System.out.println("Cadastrado com sucesso!!");
+		}
+		else
+		{
+			System.out.println("Erro ao cadastrar");
+		}
+		*/
+		Crud crud = new Crud();
+	
+		//for (int i=1; i>0;i++)
+		//{
+		System.out.println("Digite 1 para INSERIR ou 2 para VER TODOS PRODUTOS.");
+		int inserirOuVerificar = leitura.nextInt();
+		
+		if(inserirOuVerificar==1) {
+			  manda(); {
+				
+			crud.insere();
+			
+			 }
+		}
+		else if(inserirOuVerificar==2)
+		{		
+		crud.select();
+		}
+		else
+		{
+			System.out.println("Verifique a opçao desejada!!");
+			//int vericaOpcao=leitura.nextInt();
+			//if(vericaOpcao==0) {
+			//	i=0;
+			//}
+		}
+		
+		}
+
+	private static void manda() {
+		// TODO Auto-generated method stub
+		
+	}
+		
+		
+		
+
+	}
+
+
+

@@ -1,0 +1,17 @@
+package ControleDeEstoque;
+
+import java.util.Random;
+
+public class Principal {
+
+	public static void main(String[] args) {
+	
+		Produtos CadastroDeProdutos=new Produtos();
+
+		
+		
+		
+
+	}
+
+}

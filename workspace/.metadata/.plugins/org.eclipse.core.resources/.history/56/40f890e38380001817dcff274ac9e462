@@ -1,0 +1,8 @@
+package ControleDeEstoque;
+
+public class SubtraiProdutoVendido {
+
+	SubtraiProdutoVendido(int produto) {
+		int calculoProduto=produto-1;
+	}
+}

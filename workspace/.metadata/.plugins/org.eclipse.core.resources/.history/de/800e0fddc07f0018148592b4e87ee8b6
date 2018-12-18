@@ -1,0 +1,16 @@
+package ControleDeEstoque;
+
+import java.util.Random;
+
+public class Produtos {
+	
+	Produtos(int id,String codigoDeBarras,String chip){
+		//System.out.print("ID: "+id+"\n"+"Codigo de barras:"+codigoDeBarras+"\n"+"Produto: "+chip);
+		String CodBarrasProdutosEnome[1][2] = {{codigoDeBarras,"SDS 3k"}};
+		
+		
+	}
+
+	
+	
+}

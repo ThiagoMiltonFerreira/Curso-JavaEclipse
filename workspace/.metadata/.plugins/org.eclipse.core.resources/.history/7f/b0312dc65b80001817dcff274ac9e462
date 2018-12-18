@@ -1,0 +1,40 @@
+package ControleDeEstoque;
+
+import java.util.Random;
+
+public class Produtos {
+	
+	Produtos(int id,String codigoDeBarras,String chip){
+		//System.out.print("ID: "+id+"\n"+"Codigo de barras:"+codigoDeBarras+"\n"+"Produto: "+chip);
+		//String codigoDoProduto=codigoDeBarras;
+		String CodBarrasProdutosEnome[][] = {{"7890218233597","SDS 3k"}};
+		int SomenteCodDeBarras[]= new int[1];
+		//int codDeBarrasInteiro =Integer.parseInt(codigoDeBarras);
+		//SomenteCodDeBarras[0]=7890;
+		
+		
+		
+		//System.out.println(CodBarrasProdutosEnome[0][0]);
+		//System.out.println(CodBarrasProdutosEnome[0][1]);
+		
+			//int codBarrasInteiro=Integer.parseInt(codigoDeBarras);
+		for(int contLinha=0;contLinha<1;contLinha++)
+			{
+				
+				for(int contColuna=0;contColuna<=1;contColuna++)
+				{
+					//System.out.println(CodBarrasProdutosEnome[0][0]=="7890218233597");
+					//int cod=Integer.parseInt(CodBarrasProdutosEnome[contLinha][0].substring(0, 4));
+					if(Integer.parseInt(CodBarrasProdutosEnome[contLinha][0].substring(0, 4))==Integer.parseInt(codigoDeBarras.substring(0, 4)))
+					{
+					System.out.print(CodBarrasProdutosEnome[contLinha][contColuna]+" ");
+					}
+				
+			}
+		}
+	}
+}
+
+	
+	
+

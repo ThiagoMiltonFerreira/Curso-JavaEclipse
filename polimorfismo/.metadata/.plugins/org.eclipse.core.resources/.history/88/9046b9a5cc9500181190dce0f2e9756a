@@ -1,0 +1,14 @@
+package polimorfismo;
+
+public abstract class Animal {
+	//Atributos de animal
+	private float peso;
+	private float idade;
+	private float membro;
+	//Metodos de animal
+	public abstract void locomover();
+	public abstract void alimentar();
+	public abstract void emitirSom();
+	
+	
+}

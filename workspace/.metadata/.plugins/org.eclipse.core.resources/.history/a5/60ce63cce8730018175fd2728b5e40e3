@@ -1,0 +1,15 @@
+package CotroleDeGastos;
+
+import javax.swing.*;
+
+import javax.swing.JOptionPane;
+
+public class ExercitandoControleDeGastos {
+
+	public static void main(String[] args) {
+		String resposta1 = JOptionPane.showInputDialog("QUAL E A NOTA 1? ","aaa");
+		
+
+	}
+
+}

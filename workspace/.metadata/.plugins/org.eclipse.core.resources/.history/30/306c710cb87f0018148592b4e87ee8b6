@@ -1,0 +1,14 @@
+package ControleDeEstoque;
+
+import java.util.Random;
+
+public class Produtos {
+	Random gerador = new Random();
+	String nome;
+	int codigo=gerador.nextInt();
+	Produtos(){
+		System.out.println(codigo);
+	}
+	
+	
+}

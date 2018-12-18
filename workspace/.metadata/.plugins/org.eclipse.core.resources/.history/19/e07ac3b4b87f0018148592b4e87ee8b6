@@ -1,0 +1,10 @@
+package ControleDeEstoque;
+
+import java.util.Random;
+
+public class Produtos {
+	String nome;
+
+	
+	
+}

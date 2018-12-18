@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="polimorfismo.Animal"/>
+<fullyQualifiedTypeName name="polimorfismo.Reptil"/>
+<fullyQualifiedTypeName name="polimorfismo.peixe"/>
+<fullyQualifiedTypeName name="polimorfismo.Ave"/>
+<fullyQualifiedTypeName name="polimorfismo.Cachorro"/>
+<fullyQualifiedTypeName name="polimorfismo.Cobra"/>
+<fullyQualifiedTypeName name="polimorfismo.Tartaruga"/>
+<fullyQualifiedTypeName name="polimorfismo.GoldFish"/>
+<fullyQualifiedTypeName name="polimorfismo.Arara"/>
+<fullyQualifiedTypeName name="polimorfismo.Canguru"/>
+<fullyQualifiedTypeName name="polimorfismo.Mamifero"/>
+</qualifiedTypeNameHistroy>

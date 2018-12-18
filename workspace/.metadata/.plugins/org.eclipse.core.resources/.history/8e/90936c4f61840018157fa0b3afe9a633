@@ -1,0 +1,100 @@
+package ControleDeEstoque;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+import org.omg.CORBA.PUBLIC_MEMBER;
+
+public class Conexao {
+
+	
+	 /*static final String URL = "jdbc:postgresql://localhost:5432/BdControleDeEstoque"; //incica o caminho do banco de dados
+	    static final String USER = "postgres"; // aqui vai o nome usuario que vc quer acessar
+	    static final String PASS = "123"; // aqui a senha do seu banco
+	 
+	    public static Connection criarConexao() throws ClassNotFoundException, SQLException{
+	    Class.forName("org.postgresql.Driver");
+	    Connection conecta = DriverManager.getConnection(URL, USER, PASS);
+	    if (conecta != null){
+	    System.out.print("Conexão efetuada com sucesso...");
+	    return conecta;
+	    }
+	    return null;
+	    }
+		
+	    
+	    public int executaSQL(String sql) {
+	    	try {
+				Statement stm = 
+			} catch (Exception e) {
+				// TODO: handle exception
+			}
+			
+	    }
+	    */
+		
+		private String url;
+		private String usuario;
+		private String senha;
+		private Connection con ;
+		
+		 Conexao(){
+			url = "jdbc:postgresql://localhost:5432/BdControleDeEstoque";
+			usuario = "postgres";
+			senha = "123";
+			
+			try {
+				
+				Class.forName("org.postgresql.Driver");
+				con = DriverManager.getConnection(url, usuario, senha);
+				System.out.println("Conexao realisada com sucesso!");
+				
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		 }
+			
+			public int executaSQL(String sql){
+				try {
+					Statement stm = con.createStatement();
+					int res = stm.executeUpdate(sql);
+					con.close();
+					return res;
+				} catch (Exception e) {
+					e.printStackTrace();
+					return 0;
+				}
+			}
+			//select
+			public ResultSet executaBusca(String sql){
+				try {
+					Statement stm = con.createStatement();
+					ResultSet res = stm.executeQuery(sql);
+					con.close();
+					return res;
+				} catch (Exception e) {
+					e.printStackTrace();
+					return null;
+				}
+			}
+			
+			
+		}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	 
+
+	
+

@@ -1,0 +1,34 @@
+package ControleDeEstoque;
+
+import java.util.Random;
+
+public class Produtos {
+	
+	Produtos(int id,String codigoDeBarras,String chip){
+		//System.out.print("ID: "+id+"\n"+"Codigo de barras:"+codigoDeBarras+"\n"+"Produto: "+chip);
+		String codigoSds="1212";
+		String CodBarrasProdutosEnome[][] = {{"1212","SDS 3k"}};
+		for(int contLinha=0;contLinha<1;contLinha++)
+		{
+			//System.out.println(codigoDeBarras);
+			for(int contColuna=0;contColuna<=1;contColuna++)
+			{
+				if(CodBarrasProdutosEnome[contColuna][contLinha]==codigoDeBarras) {
+				System.out.print(CodBarrasProdutosEnome[contLinha][contColuna]+" ");
+				}
+				else
+				{
+					System.out.println("Codigo de barras incorreto..!");
+					break;
+				}
+				
+			}
+		}
+			
+		
+		
+	}
+
+	
+	
+}

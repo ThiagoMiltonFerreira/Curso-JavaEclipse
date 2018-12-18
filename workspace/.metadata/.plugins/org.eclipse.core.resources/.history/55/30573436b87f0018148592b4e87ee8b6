@@ -1,0 +1,15 @@
+package ControleDeEstoque;
+
+public class Principal {
+
+	public static void main(String[] args) {
+	
+		Produtos teste = new Produtos();
+		System.out.println(Produtos());
+		
+		
+		
+
+	}
+
+}

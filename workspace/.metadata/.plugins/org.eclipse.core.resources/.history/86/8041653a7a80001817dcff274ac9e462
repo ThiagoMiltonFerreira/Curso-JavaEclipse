@@ -1,0 +1,37 @@
+package ControleDeEstoque;
+
+import java.util.Random;
+
+public class Produtos {
+	
+	Produtos(String codigoDeBarras){
+		int qtdDeLinhasDaMatriz=3;
+		int qtdDeColunaNaMatriz=3;
+		String CodBarrasProdutosEnome[][] = {{"7890218233597","SDS 3k","3"},{"7890","Hark power","2"},{"7890","Cabo Y blidado Stetsom","3"}};
+		System.out.println("Codigo de barras|Produto|Qtd");
+		for(int contLinha=0;contLinha<qtdDeLinhasDaMatriz;contLinha++)
+			{
+				
+				for(int contColuna=0;contColuna<qtdDeColunaNaMatriz;contColuna++)
+				{
+
+					if(Integer.parseInt(CodBarrasProdutosEnome[contLinha][0].substring(0, 4))==Integer.parseInt(codigoDeBarras.substring(0, 4)))
+					{
+						if(contColuna==2)
+						{						
+							System.out.println(CodBarrasProdutosEnome[contLinha][contColuna]+" ");
+						}
+						else
+						{
+							System.out.print(CodBarrasProdutosEnome[contLinha][contColuna]+" ");
+						}
+					}
+				
+			}
+		}
+	}
+}
+
+	
+	
+

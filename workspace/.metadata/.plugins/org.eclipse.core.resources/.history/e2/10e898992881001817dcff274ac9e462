@@ -1,0 +1,31 @@
+package ControleDeEstoque;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+
+public class Conexao {
+
+	Conexao(){
+		  try{
+
+		        String url ="jdbc:postgresql://localhost/BdControleDeEstoque";
+		        String usuario="user";
+		        String senha = "pass";
+
+		        Class.forName("org.postgresql.Driver");
+
+		        Connection con=null;
+
+		        con=DriverManager.getConnection(url,usuario,senha);
+
+		        System.out.println("Conexão realizada com sucesso.");
+
+
+		    }catch(Exception e)
+		    {
+		        System.out.println("Problemas na conexão. Verifique a digitação dos nomes e a existência da fonte de dados. \n Recompile e execute novamente.");
+
+		    }
+		    }
+	}
+

@@ -1,0 +1,5 @@
+package polimorfismo;
+
+public abstract class Canguru extends Animal {
+
+}

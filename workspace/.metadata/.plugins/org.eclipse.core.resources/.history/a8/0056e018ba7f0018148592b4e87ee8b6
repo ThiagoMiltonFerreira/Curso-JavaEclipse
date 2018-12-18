@@ -1,0 +1,13 @@
+package ControleDeEstoque;
+
+import java.util.Random;
+
+public class Produtos {
+	
+	Produtos(int id,String chip){
+		System.out.print("ID: "+id+"\n"+"Chip: "+chip);
+	}
+
+	
+	
+}

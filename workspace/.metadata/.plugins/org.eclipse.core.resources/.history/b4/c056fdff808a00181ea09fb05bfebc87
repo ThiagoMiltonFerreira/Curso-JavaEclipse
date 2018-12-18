@@ -1,0 +1,6 @@
+package ControleDeEstoque;
+
+public class calculoDescontoProdutos {
+	Crud crud = new Crud();
+	
+}

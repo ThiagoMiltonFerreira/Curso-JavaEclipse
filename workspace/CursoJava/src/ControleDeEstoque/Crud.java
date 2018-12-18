@@ -1,0 +1,128 @@
+package ControleDeEstoque;
+
+import java.sql.ResultSet;
+
+public class Crud {
+	//String produtos = "Cabo Y";
+	Conexao con = new Conexao();
+
+	//Principal mandas = new Principal;
+	
+	
+	
+	
+    public void insere(String nomeDoProduto,String id,String qtdEstoque){
+		String sql = "INSERT INTO produtos (nome, id, qtd) VALUES ('"+nomeDoProduto+"',"+id+","+qtdEstoque+")";
+		int res = con.executaSQL(sql);
+		
+		if(res > 0) {
+			System.out.println("Cadastrado com sucesso!!");
+		}
+		else
+		{
+			System.out.println("Erro ao cadastrar");
+		}
+	}
+ 
+   
+    public void select(){
+    	String sql = "SELECT * FROM produtos ";
+    	ResultSet rs = con.executaBusca(sql);
+    	
+    	try {
+			while (rs.next()) {
+				String id = rs.getString("id");
+				String idSistema = rs.getString("idSistema");
+				String nome = rs.getString("nome");
+				int qtd = rs.getInt("qtd");
+				double valor = rs.getDouble("valor");
+
+				System.out.println(idSistema+" - "+id+" - "+nome+" - "+qtd+" - "+valor+" - ");
+				
+			}
+		} catch (Exception e) {
+		
+			e.printStackTrace();
+		}
+    
+    }
+    String id;
+    String idSistema;
+    String nome;
+    int qtd;
+	double valor;
+    public void selectComWhere(String RecebeWhere){
+    	String sql = "SELECT * FROM produtos WHERE id = '"+RecebeWhere+"'";
+    	ResultSet rs = con.executaBusca(sql);
+    	try {
+			while (rs.next()) {
+				id = rs.getString("id");
+				idSistema = rs.getString("idSistema");
+				nome = rs.getString("nome");
+				qtd = rs.getInt("qtd");
+				valor = rs.getInt("valor");
+				//System.out.println(idSistema+" - "+id+" - "+nome+" - "+qtd+" - "+valor);
+							
+			}
+		
+		} catch (Exception e) {
+		
+			e.printStackTrace();
+		}
+    
+    }
+    
+    public void excluir(String recebeIdParaDeletar) {
+	 String sql = "DELETE FROM produtos WHERE id='"+recebeIdParaDeletar+"'";
+    			
+    		int res = con.executaSQL(sql);
+    		if(res > 0) {
+    			System.out.println("Deletado com Sucesso!!");
+    		}
+    		else
+    		{
+    			System.out.println("Erro ao deletar");
+    		}
+    		
+    }
+    
+    public void alterar(String id,String qtd,String nome ){
+    	String sqlUpdate = "UPDATE produtos SET nome = '"+nome+"', qtd = '"+qtd+"' , WHERE id='"+id+"'";   	
+    
+    	int res = con.executaSQL(sqlUpdate);
+		if(res > 0) {
+			System.out.println("Alterado com Sucesso!!");
+		}
+		else
+		{
+			System.out.println("Erro ao alterar");
+		}
+    
+    }
+    
+    public void alterarPromocaoGeral(Boolean estatusPromocao, int porcentagem ){
+    	String sqlUpdate = "UPDATE produtos SET Promocao = '"+estatusPromocao+"',porcentagem_de_desconto='"+ porcentagem +"'";  
+    	
+    	@SuppressWarnings("unused")
+		ResultSet rs = con.executaBusca(sqlUpdate);
+	
+    	int res = con.executaSQL(sqlUpdate);
+		if(res > 0) {
+			System.out.println("PROMOCAO GERADA PARA TODOS PRODUTOS!!");
+		}
+		else
+		{
+			System.out.println("Erro ao GERAR PROMOCAO!!");
+		}
+		
+    
+    }
+    
+    
+      }
+
+
+    
+
+
+
